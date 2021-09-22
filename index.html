@@ -76,10 +76,7 @@
                     $(".selectCurrency1").append("<option id=\"" + element +  "\">" + element + "</option>");
                     $(".selectCurrency2").append("<option id=\"" + element +  "\">" + element + "</option>");
                 });
-                /*
-                console.log(Object.keys(data.conversion_rates), Object.values(data.conversion_rates));
-                $("#amountLabel1").attr("placeholder",data.base_code);
-                */
+                
                document.getElementById("amountLabel1").value = 1;
                changeCurrency();
             });
@@ -93,13 +90,6 @@
                     document.getElementById("CurrencyInCHF").textContent = document.getElementById("amountLabel1").value * data.conversion_rates[defaultCurrency];
                     document.getElementById("Currency").textContent = data.conversion_rates[toAmount];
                 });
-
-
-                /*
-                $.getJSON("data.json", function(data) {
-                    document.getElementById("amountLabel2").value = document.getElementById("amountLabel1").value * data.conversion_rates[toAmount];
-                });
-                */
             }
         </script>
 
